@@ -1,80 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<title>Frontend Mentor | Browser extensions manager UI</title>
+	</head>
+	<body>
+		<main class="extensions">
+			<header class="extensions__header extensions__header--flex flex">
+				<div class="extensions__header__img">
+					<img
+						src="./browser-extensions-manager-ui-main/assets/images/logo.svg"
+						alt="extensions logo"
+					/>
+				</div>
+				<div class="extensions__header__theme">
+					<img
+						src="./browser-extensions-manager-ui-main/assets/images/icon-sun.svg"
+						alt="white sun diagram"
+						class="extensions__header__theme__light"
+					/>
+					<img
+						src="./browser-extensions-manager-ui-main/assets/images/icon-moon.svg"
+						alt="white moon diagram"
+						class="extensions__header__theme__dark"
+					/>
+				</div>
+			</header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Browser extensions manager UI</title>
+			<section class="extensions__actionBar extensions__actionBar--flex flex">
+				<h1 class="extensions__actionBar__title">Extensions List</h1>
+				<div class="extensions__actionBar__state">
+					<div class="extensions__actionBar__state__all">
+						<p class="extensions__actionBar__state__all__text">All</p>
+					</div>
+					<div class="extensions__actionBar__state__active">
+						<p class="extensions__actionBar__state__active__text">Active</p>
+					</div>
+					<div class="extensions__actionBar__state__inactive">
+						<p class="extensions__actionBar__state__inactive__text">Inactive</p>
+					</div>
+				</div>
+			</section>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+			<section class="extensions__app">
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img
+							src="./browser-extensions-manager-ui-main/assets/images/logo-devlens.svg"
+							alt=""
+							class="extensions__app__type__info__icon"
+						/>
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name">DevLens</h2>
+							<p class="extensions__app__type__info__box__desc">
+								Quickly inspect page layouts and visualize element boundaries.
+							</p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						>
+							Remove
+						</button>
+						<label class="extensions__app__type__action__toggle">
+							<input type="checkbox" name="" />
+							<span class="extensions__app__type__action__toggle__slider">
+							</span>
+						</label>
+					</div>
+				</div>
+				<!--DevLens-->
 
-  Extensions List
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img
+							src="./browser-extensions-manager-ui-main/assets/images/logo-style-spy.svg"
+							alt=""
+							class="extensions__app__type__info__icon"
+						/>
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name">StyleSpy</h2>
+							<p class="extensions__app__type__info__box__desc">
+								Instantly analyze and copy CSS from any webpage element.
+							</p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						>
+							Remove
+						</button>
+						<label class="extensions__app__type__action__toggle">
+							<input type="checkbox" name="" />
+							<span
+								class="extensions__app__type__action__toggle__slider"
+							></span>
+						</label>
+					</div>
+				</div>
+				<!--StyleSpy-->
 
-  All
-  Active
-  Inactive
+				JSONWizard Formats, validates, and prettifies JSON responses in-browser.
+				Remove TabMaster Pro Organizes browser tabs into groups and sessions.
+				Remove ViewportBuddy Simulates various screen resolutions directly
+				within the browser. Remove Markup Notes Enables annotation and notes
+				directly onto webpages for collaborative debugging. Remove GridGuides
+				Overlay customizable grids and alignment guides on any webpage. Remove
+				Palette Picker Instantly extracts color palettes from any webpage.
+				Remove LinkChecker Scans and highlights broken links on any page. Remove
+				DOM Snapshot Capture and export DOM structures quickly. Remove
+				ConsolePlus Enhanced developer console with advanced filtering and
+				logging. Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img
+							src="./browser-extensions-manager-ui-main/assets/images/logo-speed-boost.svg"
+							alt=""
+							class="extensions__app__type__info__icon"
+						/>
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name">SpeedBoost</h2>
+							<p class="extensions__app__type__info__box__desc">
+								Optimizes browser resource usage to accelerate page loading.
+							</p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						>
+							Remove</button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--SpeedBoost-->
 
-  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--JSONWizard-->
 
-  DevLens
-  Quickly inspect page layouts and visualize element boundaries.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--TabMaster-->
 
-  StyleSpy
-  Instantly analyze and copy CSS from any webpage element.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--Viewport Buddy-->
 
-  SpeedBoost
-  Optimizes browser resource usage to accelerate page loading.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--Markup Notes-->
 
-  JSONWizard
-  Formats, validates, and prettifies JSON responses in-browser.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--GridGuides-->
 
-  TabMaster Pro
-  Organizes browser tabs into groups and sessions.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--Palette Picker-->
 
-  ViewportBuddy
-  Simulates various screen resolutions directly within the browser.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--Link Checker-->
 
-  Markup Notes
-  Enables annotation and notes directly onto webpages for collaborative debugging.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--DOM Snapshot-->
 
-  GridGuides
-  Overlay customizable grids and alignment guides on any webpage.
-  Remove
+				<div class="extensions__app__type">
+					<div class="extensions__app__type__info">
+						<img src="" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__box">
+							<h2 class="extensions__app__type__info__box__name"></h2>
+							<p class="extensions__app__type__info__box__desc"></p>
+						</div>
+					</div>
+					<div class="extensions__app__type__action">
+						<button
+							type="button"
+							class="extensions__app__type__action__removeBtn"
+						></button
+						><label class="extensions__app__type__action__toggle"
+							><input type="checkbox" name="" /><span
+								class="extensions__app__type__action__toggle__slider"
+							></span
+						></label>
+					</div>
+				</div>
+				<!--Console Plus-->
+			</section>
+		</main>
 
-  Palette Picker
-  Instantly extracts color palettes from any webpage.
-  Remove
+		<!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
 
-  LinkChecker
-  Scans and highlights broken links on any page.
-  Remove
-
-  DOM Snapshot
-  Capture and export DOM structures quickly.
-  Remove
-
-  ConsolePlus
-  Enhanced developer console with advanced filtering and logging.
-  Remove
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+			Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
 </html>
