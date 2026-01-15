@@ -14,7 +14,7 @@
 		<title>Frontend Mentor | Browser extensions manager UI</title>
 	</head>
 	<body>
-		<main class="extensions">
+		<main class="extensions main">
 			<header class="extensions__header extensions__header--flex flex">
 				<div class="extensions__header__img">
 					<img
@@ -36,22 +36,22 @@
 				</div>
 			</header>
 
-			<section class="extensions__actionBar extensions__actionBar--flex flex">
+			<section class="extensions__actionBar">
 				<h1 class="extensions__actionBar__title">Extensions List</h1>
-				<div class="extensions__actionBar__state">
-					<div class="extensions__actionBar__state__all">
+				<div class="extensions__actionBar__state extensions__actionBar__state--flex flex">
+					<div class="extensions__actionBar__state__btn all">
 						<p class="extensions__actionBar__state__all__text">All</p>
 					</div>
-					<div class="extensions__actionBar__state__active">
+					<div class="extensions__actionBar__state__btn active">
 						<p class="extensions__actionBar__state__active__text">Active</p>
 					</div>
-					<div class="extensions__actionBar__state__inactive">
+					<div class="extensions__actionBar__state__btn inactive">
 						<p class="extensions__actionBar__state__inactive__text">Inactive</p>
 					</div>
 				</div>
 			</section>
 
-			<section class="extensions__app">
+			<section class="extensions__app extensions__app--grid">
 				<div class="extensions__app__type">
 					<div class="extensions__app__type__info">
 						<img
