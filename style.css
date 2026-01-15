@@ -121,7 +121,6 @@ body {
 
 .flex {
 	display: flex;
-	flex-direction: column;
 }
 
 /* 
@@ -146,7 +145,6 @@ MOBILE VIEW
 }
 
 .extensions__header--flex {
-	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -154,15 +152,25 @@ MOBILE VIEW
 /* ---- action bar ---- */
 
 .extensions__actionBar__state--flex {
-	flex-direction: row;
 	justify-content: center;
 	gap: 1em;
+	margin-bottom: 2em;
+}
+
+/* extensions grid */
+
+.extensions__app__type {
+	background-color: var(--clr-white-100);
+	margin-bottom: 1em;
+	border-radius: 10px;
+	padding: 1.1em;
 }
 
 /* typo */
 
 .extensions__actionBar__title {
 	text-align: center;
+	margin-bottom: .25em;
 }
 
 /* assets */
