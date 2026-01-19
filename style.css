@@ -113,7 +113,7 @@ GLOBAL
 */
 
 body {
-	background-color: var(--clr-blue-200);
+	background-color: var(--clr-grad-light);
 	font-family: var(--fnt-fam);
 	font-size: 1rem;
 	color: var(--clr-blue-900);
@@ -157,7 +157,7 @@ MOBILE VIEW
 	margin-bottom: 2em;
 }
 
-/* extensions grid */
+/* ---- extensions grid ---- */
 
 .extensions__app__type {
 	background-color: var(--clr-white-100);
@@ -166,11 +166,37 @@ MOBILE VIEW
 	padding: 1.1em;
 }
 
+/* ---- extensions info ---- */
+
+.extensions__app__type__info {
+	margin-bottom: 1em;
+}
+
+.extensions__app__type__info--flex {
+	gap: 1em;
+	align-items: start;
+}
+
+.extensions__app__type__action--flex {
+	justify-content: space-between;
+	align-items: center;
+}
+
 /* typo */
 
 .extensions__actionBar__title {
 	text-align: center;
-	margin-bottom: .25em;
+	margin-bottom: 0.25em;
+}
+
+.extensions__app__type__info__box__name {
+	font-size: 1.24rem;
+	margin-top: -0.2em;
+}
+
+.extensions__app__type__info__box__desc {
+	font-size: 0.9rem;
+	color: var(--clr-blue-600);
 }
 
 /* assets */
@@ -192,12 +218,73 @@ MOBILE VIEW
 
 .extensions__actionBar__state__btn {
 	background-color: var(--clr-white-100);
-	padding: .2em .8em;
+	padding: 0.2em 0.8em;
 	border-radius: 40px;
 	cursor: pointer;
+}
+
+.extensions__app__type__info__icon {
+	width: 70px;
+}
+
+.extensions__app__type__action__removeBtn {
+	display: inline-block;
+	padding: 0.24em 0.9em;
+	background-color: var(--clr-white-100);
+	outline: none;
+	border-radius: 40px;
+	border: 1px solid var(--clr-white-500);
+	font-size: 0.9rem;
+	font-weight: 500;
 }
 
 .active {
 	background-color: var(--clr-red-500);
 	color: var(--clr-white-100);
+}
+
+/* ---- toggle switch ---- */
+
+.extensions__app__type__action__toggle {
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 1.3em;
+}
+
+input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.extensions__app__type__action__toggle__slider {
+	position: absolute;
+	inset: 0;
+	background: var(--clr-white-500);
+	border-radius: 40px;
+	cursor: pointer;
+	transition-duration: 400ms;
+	transition-property: background;
+}
+
+.extensions__app__type__action__toggle__slider:before {
+	content: "";
+	position: absolute;
+	height: 1em;
+	width: 1em;
+	top: 2px;
+	left: 3px;
+	background-color: var(--clr-white-100);
+	border-radius: 50%;
+	transition-duration: 400ms;
+	transition-property: transform;
+}
+
+input:checked + .extensions__app__type__action__toggle__slider {
+	background: var(--clr-red-500);
+}
+
+input:checked + .extensions__app__type__action__toggle__slider:before {
+	transform: translateX(11px);
 }
