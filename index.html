@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -10,7 +10,7 @@
 			sizes="32x32"
 			href="./assets/images/favicon-32x32.png"
 		/>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
 		<title>Frontend Mentor | Browser extensions manager UI</title>
 	</head>
 	<body>
@@ -36,13 +36,15 @@
 				</div>
 			</header>
 
-			<section class="extensions__actionBar">
+			<section class="extensions__actionBar flex extensions__actionBar--flex">
 				<h1 class="extensions__actionBar__title">Extensions List</h1>
-				<div class="extensions__actionBar__state extensions__actionBar__state--flex flex">
+				<div
+					class="extensions__actionBar__state extensions__actionBar__state--flex flex"
+				>
 					<div class="extensions__actionBar__state__btn all">
 						<p class="extensions__actionBar__state__all__text">All</p>
 					</div>
-					<div class="extensions__actionBar__state__btn active">
+					<div class="extensions__actionBar__state__btn active clicked">
 						<p class="extensions__actionBar__state__active__text">Active</p>
 					</div>
 					<div class="extensions__actionBar__state__btn inactive">
@@ -51,14 +53,17 @@
 				</div>
 			</section>
 
-			<section class="extensions__app extensions__app--grid">
+			<section class="extensions__app extensions__app--grid grid">
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-devlens.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-devlens.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">DevLens</h2>
 							<p class="extensions__app__type__info__box__desc">
@@ -66,7 +71,9 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
@@ -74,7 +81,7 @@
 							Remove
 						</button>
 						<label class="extensions__app__type__action__toggle">
-							<input type="checkbox" name="DevLens" id="DevLens"/>
+							<input type="checkbox" name="DevLens" id="DevLens" />
 							<span class="extensions__app__type__action__toggle__slider">
 							</span>
 						</label>
@@ -83,12 +90,15 @@
 				<!--DevLens-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-style-spy.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-style-spy.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">StyleSpy</h2>
 							<p class="extensions__app__type__info__box__desc">
@@ -96,7 +106,9 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
@@ -104,7 +116,7 @@
 							Remove
 						</button>
 						<label class="extensions__app__type__action__toggle">
-							<input type="checkbox" name="StyleSpy" id="StyleSpy"/>
+							<input type="checkbox" name="StyleSpy" id="StyleSpy" />
 							<span
 								class="extensions__app__type__action__toggle__slider"
 							></span>
@@ -114,27 +126,32 @@
 				<!--StyleSpy-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-speed-boost.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
-						<div class="extensions__app__type__info__box ">
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-speed-boost.svg"
+								alt=""
+							/>
+						</div>
+						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">SpeedBoost</h2>
 							<p class="extensions__app__type__info__box__desc">
 								Optimizes browser resource usage to accelerate page loading.
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="SpeedBoost" id="SpeedBoost"/><span
+							><input type="checkbox" name="SpeedBoost" id="SpeedBoost" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -143,12 +160,15 @@
 				<!--SpeedBoost-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-json-wizard.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-json-wizard.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">JSONWizard</h2>
 							<p class="extensions__app__type__info__box__desc">
@@ -156,14 +176,16 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="JSONWizard" id="JSONWizard"/><span
+							><input type="checkbox" name="JSONWizard" id="JSONWizard" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -172,8 +194,15 @@
 				<!--JSONWizard-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img src="./browser-extensions-manager-ui-main/assets/images/logo-tab-master-pro.svg" alt="" class="extensions__app__type__info__icon" />
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-tab-master-pro.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								TabMaster Pro
@@ -183,14 +212,20 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
-							Remove</button>
+							Remove
+						</button>
 						<label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="TabMaster_Pro" id="TabMaster_Pro"/><span
+							><input
+								type="checkbox"
+								name="TabMaster_Pro"
+								id="TabMaster_Pro" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -199,12 +234,15 @@
 				<!--TabMaster-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-viewport-buddy.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-viewport-buddy.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								ViewportBuddy
@@ -215,14 +253,19 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="ViewportBuddy" id="ViewportBuddy"/><span
+							><input
+								type="checkbox"
+								name="ViewportBuddy"
+								id="ViewportBuddy" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -231,12 +274,15 @@
 				<!--Viewport Buddy-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-markup-notes.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-markup-notes.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								Markup Notes
@@ -247,14 +293,16 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="" id="Markup_Notes"/><span
+							><input type="checkbox" name="" id="Markup_Notes" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -263,12 +311,15 @@
 				<!--Markup Notes-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-grid-guides.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-grid-guides.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">GridGuides</h2>
 							<p class="extensions__app__type__info__box__desc">
@@ -276,14 +327,16 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="GridGuides" id="GridGuides"/><span
+							><input type="checkbox" name="GridGuides" id="GridGuides" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -292,12 +345,15 @@
 				<!--GridGuides-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-palette-picker.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-palette-picker.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								Palette Picker
@@ -307,14 +363,19 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="Palette_Picker" id="Palette_Picker" /><span
+							><input
+								type="checkbox"
+								name="Palette_Picker"
+								id="Palette_Picker" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -323,12 +384,15 @@
 				<!--Palette Picker-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-link-checker.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-link-checker.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								LinkChecker
@@ -338,14 +402,19 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="LinkChecker" id="LinkChecker"/><span
+							><input
+								type="checkbox"
+								name="LinkChecker"
+								id="LinkChecker" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -354,12 +423,15 @@
 				<!--Link Checker-->
 
 				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img
-							src="./browser-extensions-manager-ui-main/assets/images/logo-dom-snapshot.svg"
-							alt=""
-							class="extensions__app__type__info__icon"
-						/>
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-dom-snapshot.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								DOM Snapshot
@@ -369,14 +441,19 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="DOM Snapshot" id="DOM Snapshot"/><span
+							><input
+								type="checkbox"
+								name="DOM Snapshot"
+								id="DOM Snapshot" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -386,7 +463,12 @@
 
 				<div class="extensions__app__type">
 					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
-						<img src="./browser-extensions-manager-ui-main/assets/images/logo-console-plus.svg" alt="" class="extensions__app__type__info__icon" />
+						<div class="extensions__app__type__info__icon">
+							<img
+								src="./browser-extensions-manager-ui-main/assets/images/logo-console-plus.svg"
+								alt=""
+							/>
+						</div>
 						<div class="extensions__app__type__info__box">
 							<h2 class="extensions__app__type__info__box__name">
 								ConsolePlus
@@ -396,14 +478,19 @@
 							</p>
 						</div>
 					</div>
-					<div class="extensions__app__type__action extensions__app__type__action--flex flex">
+					<div
+						class="extensions__app__type__action extensions__app__type__action--flex flex"
+					>
 						<button
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="ConsolePlus" id="ConsolePlus" /><span
+							><input
+								type="checkbox"
+								name="ConsolePlus"
+								id="ConsolePlus" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>

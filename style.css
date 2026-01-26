@@ -113,7 +113,7 @@ GLOBAL
 */
 
 body {
-	background-color: var(--clr-grad-light);
+	background: var(--clr-grad-light);
 	font-family: var(--fnt-fam);
 	font-size: 1rem;
 	color: var(--clr-blue-900);
@@ -121,6 +121,10 @@ body {
 
 .flex {
 	display: flex;
+}
+
+.grid {
+	display: grid;
 }
 
 /* 
@@ -134,13 +138,13 @@ MOBILE VIEW
 	margin: 1em auto;
 }
 
-/* ---- header ---- */
+/* ---- header layout ---- */
 
 .extensions__header {
 	background-color: var(--clr-white-100);
 	padding: 0.58em;
 	border-radius: 9px;
-	box-shadow: 2px 2px 8px var(--clr-white-500);
+	box-shadow: 0 0 4px var(--clr-white-500);
 	margin-bottom: 2em;
 }
 
@@ -149,7 +153,11 @@ MOBILE VIEW
 	justify-content: space-between;
 }
 
-/* ---- action bar ---- */
+/* ---- action bar layout ---- */
+
+.extensions__actionBar--flex {
+	flex-direction: column;
+}
 
 .extensions__actionBar__state--flex {
 	justify-content: center;
@@ -157,24 +165,28 @@ MOBILE VIEW
 	margin-bottom: 2em;
 }
 
-/* ---- extensions grid ---- */
+/* ---- extensions layout ---- */
 
 .extensions__app__type {
 	background-color: var(--clr-white-100);
+	box-shadow: 0 0 3px var(--clr-white-500);
 	margin-bottom: 1em;
 	border-radius: 10px;
-	padding: 1.1em;
+	padding: 1em;
+	max-width: 400px;
 }
-
-/* ---- extensions info ---- */
 
 .extensions__app__type__info {
 	margin-bottom: 1em;
 }
 
 .extensions__app__type__info--flex {
-	gap: 1em;
+	gap: 0.8em;
 	align-items: start;
+}
+
+.extensions__app__type__info__icon {
+	width: 30%;
 }
 
 .extensions__app__type__action--flex {
@@ -218,13 +230,10 @@ MOBILE VIEW
 
 .extensions__actionBar__state__btn {
 	background-color: var(--clr-white-100);
-	padding: 0.2em 0.8em;
+	box-shadow: 0 0 3px var(--clr-white-500);
+	padding: 0.34em 1.18em;
 	border-radius: 40px;
 	cursor: pointer;
-}
-
-.extensions__app__type__info__icon {
-	width: 70px;
 }
 
 .extensions__app__type__action__removeBtn {
@@ -238,7 +247,7 @@ MOBILE VIEW
 	font-weight: 500;
 }
 
-.active {
+.clicked {
 	background-color: var(--clr-red-500);
 	color: var(--clr-white-100);
 }
@@ -284,7 +293,27 @@ input {
 input:checked + .extensions__app__type__action__toggle__slider {
 	background: var(--clr-red-500);
 }
-
 input:checked + .extensions__app__type__action__toggle__slider:before {
 	transform: translateX(11px);
+}
+
+@media (min-width: 700px) {
+	.extensions__app--grid {
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		column-gap: 1em;
+	}
+
+	.extensions__actionBar {
+		margin-bottom: 1.3em;
+	}
+
+	.extensions__actionBar--flex {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.extensions__actionBar__state--flex {
+		margin-bottom: 0;
+	}
 }
