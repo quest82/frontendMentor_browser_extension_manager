@@ -11,6 +11,9 @@ const all_checkbox = Array.from(
 const extension_app = Array.from(
 	document.querySelectorAll(".extensions__app__type"),
 );
+const label = Array.from(
+	document.querySelectorAll(".extensions__app__type__action__toggle"),
+);
 
 let active_checkbox = [];
 let inactive_checkbox = [];
@@ -30,32 +33,17 @@ action_all.addEventListener("click", () => {
 });
 
 action_active.addEventListener("click", () => {
-	getCheckBoxState();
-	restoreAllExtensions();
-
-	inactive_checkbox.forEach((active) => {
-		extension_app.forEach((app) => {
-			if (active.name === app.id) {
-				app.style.display = "none";
-			}
-		});
-	});
+	addOrRemoveExtensions(inactive_checkbox);
 });
 
 action_inactive.addEventListener("click", () => {
-	getCheckBoxState();
-	restoreAllExtensions();
-
-	active_checkbox.forEach((active) => {
-		extension_app.forEach((app) => {
-			if (active.name === app.id) {
-				app.style.display = "none";
-			}
-		});
-	});
+	addOrRemoveExtensions(active_checkbox);
 });
 
+// Helper Functions
+
 function getCheckBoxState() {
+	// Saves the state of the checkboxes within two arrays, active and inactive dependent on the state
 	all_checkbox.forEach((checkbox) => {
 		if (checkbox.checked) {
 			active_checkbox.push(checkbox);
@@ -66,13 +54,26 @@ function getCheckBoxState() {
 }
 
 function restoreAllExtensions() {
+	// Resets the extensions that get displayed
 	extension_app.forEach((app) => {
 		app.style.display = "block";
 	});
 }
 
-// const extensionBox = Array.from(document.querySelectorAll(".extensions__app__type"));
-// const label = Array.from(document.querySelectorAll(".extensions__app__type__action__toggle"));
+function addOrRemoveExtensions(arr) {
+	// Adds or removes the extension that is displayed
+	getCheckBoxState();
+	restoreAllExtensions();
+
+	arr.forEach((active) => {
+		extension_app.forEach((app) => {
+			if (active.name === app.id) {
+				app.style.display = "none";
+			}
+		});
+	});
+}
+
 
 // Activity Bar
 
