@@ -33,7 +33,7 @@ FONT IMPORT
 		format("truetype-variations");
 	font-display: swap;
 	font-style: normal;
-	font-size: 0 999;
+	font-weight: 1 999;
 }
 
 /* 
@@ -134,7 +134,7 @@ MOBILE VIEW
 /* layout */
 
 .main {
-	width: min(93vw, 62.5em);
+	width: min(93vw, 68.75em);
 	margin: 1em auto;
 }
 
@@ -234,6 +234,9 @@ MOBILE VIEW
 	padding: 0.34em 1.18em;
 	border-radius: 40px;
 	cursor: pointer;
+	transition-property: all ;
+	transition-duration: 2s;
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .extensions__app__type__action__removeBtn {
@@ -296,6 +299,10 @@ input:checked + .extensions__app__type__action__toggle__slider {
 input:checked + .extensions__app__type__action__toggle__slider:before {
 	transform: translateX(11px);
 }
+
+
+
+
 
 @media (min-width: 700px) {
 	.extensions__app--grid {

@@ -12,6 +12,7 @@
 		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Frontend Mentor | Browser extensions manager UI</title>
+		<script src="script.js" defer></script>
 	</head>
 	<body>
 		<main class="extensions main">
@@ -41,10 +42,10 @@
 				<div
 					class="extensions__actionBar__state extensions__actionBar__state--flex flex"
 				>
-					<div class="extensions__actionBar__state__btn all">
+					<div class="extensions__actionBar__state__btn all clicked">
 						<p class="extensions__actionBar__state__all__text">All</p>
 					</div>
-					<div class="extensions__actionBar__state__btn active clicked">
+					<div class="extensions__actionBar__state__btn active">
 						<p class="extensions__actionBar__state__active__text">Active</p>
 					</div>
 					<div class="extensions__actionBar__state__btn inactive">
@@ -54,7 +55,7 @@
 			</section>
 
 			<section class="extensions__app extensions__app--grid grid">
-				<div class="extensions__app__type">
+				<div class="extensions__app__type DevLens">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -89,7 +90,7 @@
 				</div>
 				<!--DevLens-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type StyleSpy">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -125,7 +126,7 @@
 				</div>
 				<!--StyleSpy-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type SpeedBoost">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -159,7 +160,7 @@
 				</div>
 				<!--SpeedBoost-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type JSONWizard">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -193,7 +194,7 @@
 				</div>
 				<!--JSONWizard-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type TabMaster_Pro">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -233,7 +234,7 @@
 				</div>
 				<!--TabMaster-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type ViewportBuddy">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -273,7 +274,7 @@
 				</div>
 				<!--Viewport Buddy-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type Markup_Notes">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -310,7 +311,7 @@
 				</div>
 				<!--Markup Notes-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type GridGuides">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -344,7 +345,7 @@
 				</div>
 				<!--GridGuides-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type Palette_Picker">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -383,7 +384,7 @@
 				</div>
 				<!--Palette Picker-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type LinkChecker">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -422,7 +423,7 @@
 				</div>
 				<!--Link Checker-->
 
-				<div class="extensions__app__type">
+				<div class="extensions__app__type DOM_Snapshot">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -452,8 +453,8 @@
 						><label class="extensions__app__type__action__toggle"
 							><input
 								type="checkbox"
-								name="DOM Snapshot"
-								id="DOM Snapshot" /><span
+								name="DOM_Snapshot"
+								id="DOM_Snapshot" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -461,8 +462,10 @@
 				</div>
 				<!--DOM Snapshot-->
 
-				<div class="extensions__app__type">
-					<div class="extensions__app__type__info extensions__app__type__info--flex flex">
+				<div class="extensions__app__type ConsolePlus">
+					<div
+						class="extensions__app__type__info extensions__app__type__info--flex flex"
+					>
 						<div class="extensions__app__type__info__icon">
 							<img
 								src="./browser-extensions-manager-ui-main/assets/images/logo-console-plus.svg"
@@ -485,15 +488,17 @@
 							type="button"
 							class="extensions__app__type__action__removeBtn"
 						>
-							Remove</button
-						><label class="extensions__app__type__action__toggle"
+							Remove
+						</button>
+						<label class="extensions__app__type__action__toggle"
 							><input
 								type="checkbox"
 								name="ConsolePlus"
-								id="ConsolePlus" /><span
+								id="ConsolePlus"
+							/><span
 								class="extensions__app__type__action__toggle__slider"
-							></span
-						></label>
+							></span>
+						</label>
 					</div>
 				</div>
 				<!--Console Plus-->
