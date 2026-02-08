@@ -15,7 +15,7 @@
 		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<main class="extensions main">
+		<main class="extensions">
 			<header class="extensions__header extensions__header--flex flex">
 				<div class="extensions__header__img">
 					<img
@@ -55,7 +55,7 @@
 			</section>
 
 			<section class="extensions__app extensions__app--grid grid">
-				<div class="extensions__app__type DevLens">
+				<div class="extensions__app__type" id="DevLens">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -82,7 +82,7 @@
 							Remove
 						</button>
 						<label class="extensions__app__type__action__toggle">
-							<input type="checkbox" name="DevLens" id="DevLens" />
+							<input type="checkbox" name="DevLens"/>
 							<span class="extensions__app__type__action__toggle__slider">
 							</span>
 						</label>
@@ -90,7 +90,7 @@
 				</div>
 				<!--DevLens-->
 
-				<div class="extensions__app__type StyleSpy">
+				<div class="extensions__app__type" id="StyleSpy">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -117,7 +117,7 @@
 							Remove
 						</button>
 						<label class="extensions__app__type__action__toggle">
-							<input type="checkbox" name="StyleSpy" id="StyleSpy" />
+							<input type="checkbox" name="StyleSpy"/>
 							<span
 								class="extensions__app__type__action__toggle__slider"
 							></span>
@@ -126,7 +126,7 @@
 				</div>
 				<!--StyleSpy-->
 
-				<div class="extensions__app__type SpeedBoost">
+				<div class="extensions__app__type" id="SpeedBoost">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -152,7 +152,7 @@
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="SpeedBoost" id="SpeedBoost" /><span
+							><input type="checkbox" name="SpeedBoost"/><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -160,7 +160,7 @@
 				</div>
 				<!--SpeedBoost-->
 
-				<div class="extensions__app__type JSONWizard">
+				<div class="extensions__app__type" id="JSONWizard">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -186,7 +186,7 @@
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="JSONWizard" id="JSONWizard" /><span
+							><input type="checkbox" name="JSONWizard" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -194,7 +194,7 @@
 				</div>
 				<!--JSONWizard-->
 
-				<div class="extensions__app__type TabMaster_Pro">
+				<div class="extensions__app__type" id="TabMaster_Pro">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -226,7 +226,7 @@
 							><input
 								type="checkbox"
 								name="TabMaster_Pro"
-								id="TabMaster_Pro" /><span
+								 /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -234,7 +234,7 @@
 				</div>
 				<!--TabMaster-->
 
-				<div class="extensions__app__type ViewportBuddy">
+				<div class="extensions__app__type" id="ViewportBuddy">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -266,7 +266,7 @@
 							><input
 								type="checkbox"
 								name="ViewportBuddy"
-								id="ViewportBuddy" /><span
+								 /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -274,7 +274,7 @@
 				</div>
 				<!--Viewport Buddy-->
 
-				<div class="extensions__app__type Markup_Notes">
+				<div class="extensions__app__type" id="Markup_Notes">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -303,7 +303,7 @@
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="" id="Markup_Notes" /><span
+							><input type="checkbox" name="Markup_Notes"/><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -311,7 +311,7 @@
 				</div>
 				<!--Markup Notes-->
 
-				<div class="extensions__app__type GridGuides">
+				<div class="extensions__app__type"  id="GridGuides">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -337,7 +337,7 @@
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input type="checkbox" name="GridGuides" id="GridGuides" /><span
+							><input type="checkbox" name="GridGuides" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -345,7 +345,7 @@
 				</div>
 				<!--GridGuides-->
 
-				<div class="extensions__app__type Palette_Picker">
+				<div class="extensions__app__type" id="Palette_Picker">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -376,7 +376,7 @@
 							><input
 								type="checkbox"
 								name="Palette_Picker"
-								id="Palette_Picker" /><span
+								 /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -384,7 +384,7 @@
 				</div>
 				<!--Palette Picker-->
 
-				<div class="extensions__app__type LinkChecker">
+				<div class="extensions__app__type" id="LinkChecker">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -412,10 +412,7 @@
 						>
 							Remove</button
 						><label class="extensions__app__type__action__toggle"
-							><input
-								type="checkbox"
-								name="LinkChecker"
-								id="LinkChecker" /><span
+							><input type="checkbox" name="LinkChecker" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span
 						></label>
@@ -423,7 +420,7 @@
 				</div>
 				<!--Link Checker-->
 
-				<div class="extensions__app__type DOM_Snapshot">
+				<div class="extensions__app__type" id="DOM_Snapshot">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -450,19 +447,17 @@
 							class="extensions__app__type__action__removeBtn"
 						>
 							Remove</button
-						><label class="extensions__app__type__action__toggle"
-							><input
-								type="checkbox"
-								name="DOM_Snapshot"
-								id="DOM_Snapshot" /><span
+						><label class="extensions__app__type__action__toggle">
+							<input type="checkbox" name="DOM_Snapshot" />
+							<span
 								class="extensions__app__type__action__toggle__slider"
-							></span
-						></label>
+							></span>
+						</label>
 					</div>
 				</div>
 				<!--DOM Snapshot-->
 
-				<div class="extensions__app__type ConsolePlus">
+				<div class="extensions__app__type" id="ConsolePlus">
 					<div
 						class="extensions__app__type__info extensions__app__type__info--flex flex"
 					>
@@ -491,11 +486,7 @@
 							Remove
 						</button>
 						<label class="extensions__app__type__action__toggle"
-							><input
-								type="checkbox"
-								name="ConsolePlus"
-								id="ConsolePlus"
-							/><span
+							><input type="checkbox" name="ConsolePlus" /><span
 								class="extensions__app__type__action__toggle__slider"
 							></span>
 						</label>
