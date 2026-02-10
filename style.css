@@ -113,10 +113,15 @@ GLOBAL
 */
 
 body {
-	background: var(--clr-grad-light);
+	background-image: var(--clr-grad-light);
 	font-family: var(--fnt-fam);
 	font-size: 1rem;
 	color: var(--clr-blue-900);
+}
+
+.body--dark {
+	background-image: var(--clr-grad-dark);
+	color: var(--clr-white-100);
 }
 
 .flex {
@@ -148,6 +153,10 @@ MOBILE VIEW
 	margin-bottom: 2em;
 }
 
+.extensions__header.dark {
+	background-color: var(--clr-blue-800);
+}
+
 .extensions__header--flex {
 	align-items: center;
 	justify-content: space-between;
@@ -174,6 +183,10 @@ MOBILE VIEW
 	border-radius: 10px;
 	padding: 1em;
 	max-width: 400px;
+}
+
+.extensions__app__type--dark {
+	background-color: var(--clr-blue-800);
 }
 
 .extensions__app__type__info {
@@ -211,10 +224,21 @@ MOBILE VIEW
 	color: var(--clr-blue-600);
 }
 
+.extensions__app__type__info__box__desc--dark {
+	color: var(--clr-white-500);
+}
 /* assets */
 
 .extensions__header__img {
 	width: 150px;
+}
+
+.extensions__header__img--dark {
+	display: none;
+}
+
+.extensions__header__theme:hover {
+	cursor: pointer;
 }
 
 .extensions__header__theme__light {
@@ -234,9 +258,15 @@ MOBILE VIEW
 	padding: 0.34em 1.18em;
 	border-radius: 40px;
 	cursor: pointer;
-	transition-property: all ;
+	transition-property: background;
 	transition-duration: 2s;
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	color: inherit;
+}
+
+.extensions__actionBar__state__btn--dark {
+	background-color: var(--clr-blue-800);
+	box-shadow: none;
 }
 
 .extensions__app__type__action__removeBtn {
@@ -248,6 +278,11 @@ MOBILE VIEW
 	border: 1px solid var(--clr-white-500);
 	font-size: 0.9rem;
 	font-weight: 500;
+	color: inherit;
+}
+
+.extensions__app__type__action__removeBtn--dark {
+	background-color: var(--clr-blue-800);
 }
 
 .clicked {
@@ -273,11 +308,15 @@ input {
 .extensions__app__type__action__toggle__slider {
 	position: absolute;
 	inset: 0;
-	background: var(--clr-white-500);
+	background-color: var(--clr-white-500);
 	border-radius: 40px;
 	cursor: pointer;
 	transition-duration: 400ms;
 	transition-property: background;
+}
+
+.extensions__app__type__action__toggle__slider--dark {
+	background-color: var(--clr-blue-600);
 }
 
 .extensions__app__type__action__toggle__slider:before {
@@ -300,9 +339,7 @@ input:checked + .extensions__app__type__action__toggle__slider:before {
 	transform: translateX(11px);
 }
 
-
-
-
+/* MEDIA QUERIES */
 
 @media (min-width: 700px) {
 	.extensions__app--grid {

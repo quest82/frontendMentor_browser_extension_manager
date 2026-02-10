@@ -1,4 +1,9 @@
 // DOM QUERIES
+const body = document.querySelector("body");
+const header = document.querySelector(".extensions__header");
+const theme_btn = document.querySelector(".extensions__header__theme");
+const logo_light = document.querySelector(".extensions__header__img--light");
+const logo_dark = document.querySelector(".extensions__header__img--dark");
 const action_btn = Array.from(
 	document.querySelectorAll(".extensions__actionBar__state__btn"),
 );
@@ -11,8 +16,17 @@ const all_checkbox = Array.from(
 const extension_app = Array.from(
 	document.querySelectorAll(".extensions__app__type"),
 );
+const extension_description = Array.from(
+	document.querySelectorAll(".extensions__app__type__info__box__desc"),
+);
+const remove_btn = Array.from(
+	document.querySelectorAll(".extensions__app__type__action__removeBtn"),
+);
 const label = Array.from(
 	document.querySelectorAll(".extensions__app__type__action__toggle"),
+);
+const slider_box = Array.from(
+	document.querySelectorAll(".extensions__app__type__action__toggle__slider"),
 );
 
 let active_checkbox = [];
@@ -38,6 +52,37 @@ action_active.addEventListener("click", () => {
 
 action_inactive.addEventListener("click", () => {
 	addOrRemoveExtensions(active_checkbox);
+});
+
+// Removes app from display when extension state is changed
+
+// Changes Themes
+
+theme_btn.addEventListener("click", () => {
+	body.classList.toggle("body--dark");
+	extension_app.forEach((extension) => {
+		extension.classList.toggle("extensions__app__type--dark");
+	});
+	extension_description.forEach((desc) => {
+		desc.classList.toggle("extensions__app__type__info__box__desc--dark");
+	});
+	remove_btn.forEach((btn) => {
+		btn.classList.toggle("extensions__app__type__action__removeBtn--dark");
+	});
+	action_btn.forEach((btn) => {
+		btn.classList.toggle("extensions__actionBar__state__btn--dark");
+	});
+	slider_box.forEach((box) => {
+		box.classList.toggle("extensions__app__type__action__toggle__slider--dark");
+	});
+	header.classList.toggle("dark");
+	if (header.classList.contains("dark")) {
+		logo_light.style.display = "none";
+		logo_dark.style.display = "block";
+	} else {
+		logo_light.style.display = "block";
+		logo_dark.style.display = "none";
+	}
 });
 
 // Helper Functions
@@ -73,7 +118,6 @@ function addOrRemoveExtensions(arr) {
 		});
 	});
 }
-
 
 // Activity Bar
 
